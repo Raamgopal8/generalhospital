@@ -90,9 +90,7 @@ GitHub     : https://github.com/Raamgopal8/generalhospital
 
 **UPDATE HISTORY**
 
-**--------------------------------------------------------------------------------**
-[v1.0] — Initial Build
-**--------------------------------------------------------------------------------**
+**[v1.0] — Initial Build**
   • Full hospital management system created from scratch
   • React frontend with glassmorphism dark-mode UI
   • Express.js backend REST API
@@ -105,9 +103,7 @@ GitHub     : https://github.com/Raamgopal8/generalhospital
       - Appointment booking
       - User authentication & registration
 
-**--------------------------------------------------------------------------------**
-[v1.1] — Staff Duty Management Feature
-**--------------------------------------------------------------------------------**
+**[v1.1] — Staff Duty Management Feature**
   NEW FEATURE: Staff Duty Scheduler (Admin Only)
 
   Backend:
@@ -135,9 +131,7 @@ GitHub     : https://github.com/Raamgopal8/generalhospital
   • Resolved React CSS rerender warnings in AdminDashboard.jsx
     (replaced inline borderColor with full border shorthand)
 
-**--------------------------------------------------------------------------------**
-[v1.2] — MongoDB Atlas Migration
-**--------------------------------------------------------------------------------**
+**[v1.2] — MongoDB Atlas Migration**
   • Migrated from local MongoDB to MongoDB Atlas cloud cluster
   • Updated backend/.env with Atlas connection string:
       reactjscluster.3jmtfcp.mongodb.net
@@ -147,10 +141,10 @@ GitHub     : https://github.com/Raamgopal8/generalhospital
       - Medicine records
       - Bed registry
 
-**--------------------------------------------------------------------------------**
-[v1.3] — Lakshmi Hospitals Rebranding
-**--------------------------------------------------------------------------------**
-  BRANDING: Full conversion from generic portal to Lakshmi Hospitals
+
+**[v1.3] — Hospital Rebranding** 
+
+BRANDING: Full conversion from generic portal to Lakshmi Hospitals
 
   Auth.jsx (Login Page):
   • Renamed portal from "Aura Care" → "Lakshmi Hospitals"
@@ -176,15 +170,6 @@ GitHub     : https://github.com/Raamgopal8/generalhospital
   index.html:
   • Updated browser tab title
   • Added SEO meta description, keywords, author, OG tags
-
-**--------------------------------------------------------------------------------**
-[v1.4] — Contact Number Update
-**--------------------------------------------------------------------------------**
-  • Updated hospital phone number to: +91 9444172675
-  • Changed in all locations:
-      - Auth.jsx       : Info panel — Emergency & OPD lines
-      - Header.jsx     : Dashboard info bar emergency contact
-      - index.html     : SEO meta description
 
 **FEATURES SUMMARY**
 
