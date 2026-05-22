@@ -1,21 +1,15 @@
-================================================================================
-  LAKSHMI HOSPITALS — HOSPITAL MANAGEMENT SYSTEM
-  README & UPDATE RECORD
-================================================================================
+General Hospital — HOSPITAL MANAGEMENT SYSTEM
 
-Hospital   : Lakshmi Hospitals
-Address    : TELC Complex, No: 7A/44-1D, MG Puram, Rover School Rd,
-             Sungu Pettai, Perambalur, Tamil Nadu 621212
-Emergency  : +91 9444172675
-OPD        : +91 9444172675
+Hospital   : General Hospital
+Address    : Near MB Park, Main Road,
+             Ariyalur, Tamil Nadu 621704
+Emergency  : +91 6369610667
+OPD        : +91 6369610667
 Timings    : OPD: 8:00 AM – 8:00 PM | Emergency: 24 × 7
-Accredited : NABH | ISO 9001 | 24/7 ICU
 
-GitHub     : https://github.com/Raamgopal8/lakshmihostpitals
+GitHub     : https://github.com/Raamgopal8/generalhospital
 
-================================================================================
-  TECH STACK
-================================================================================
+**TECH STACK**
 
   Frontend  : React (Vite), Vanilla CSS, Lucide Icons
   Backend   : Node.js, Express.js
@@ -23,9 +17,7 @@ GitHub     : https://github.com/Raamgopal8/lakshmihostpitals
               URI: reactjscluster.3jmtfcp.mongodb.net
   Auth      : JWT-based authentication (Role: admin / user)
 
-================================================================================
-  PROJECT STRUCTURE
-================================================================================
+**PROJECT STRUCTURE**
 
   Hospital/
   ├── backend/
@@ -68,9 +60,7 @@ GitHub     : https://github.com/Raamgopal8/lakshmihostpitals
   ├── package.json
   └── README.txt                         ← THIS FILE
 
-================================================================================
-  HOW TO RUN
-================================================================================
+**HOW TO RUN**
 
   1. Install dependencies:
        npm install
@@ -98,14 +88,11 @@ GitHub     : https://github.com/Raamgopal8/lakshmihostpitals
        Email    : admin@lakshmi.com
        Password : admin123
 
-================================================================================
-  UPDATE HISTORY
-================================================================================
+**UPDATE HISTORY**
 
---------------------------------------------------------------------------------
-  [v1.0] — Initial Build
-  Date: 2026-05-22
---------------------------------------------------------------------------------
+**--------------------------------------------------------------------------------**
+[v1.0] — Initial Build
+**--------------------------------------------------------------------------------**
   • Full hospital management system created from scratch
   • React frontend with glassmorphism dark-mode UI
   • Express.js backend REST API
@@ -118,10 +105,9 @@ GitHub     : https://github.com/Raamgopal8/lakshmihostpitals
       - Appointment booking
       - User authentication & registration
 
---------------------------------------------------------------------------------
-  [v1.1] — Staff Duty Management Feature
-  Date: 2026-05-22
---------------------------------------------------------------------------------
+**--------------------------------------------------------------------------------**
+[v1.1] — Staff Duty Management Feature
+**--------------------------------------------------------------------------------**
   NEW FEATURE: Staff Duty Scheduler (Admin Only)
 
   Backend:
@@ -149,10 +135,9 @@ GitHub     : https://github.com/Raamgopal8/lakshmihostpitals
   • Resolved React CSS rerender warnings in AdminDashboard.jsx
     (replaced inline borderColor with full border shorthand)
 
---------------------------------------------------------------------------------
-  [v1.2] — MongoDB Atlas Migration
-  Date: 2026-05-22
---------------------------------------------------------------------------------
+**--------------------------------------------------------------------------------**
+[v1.2] — MongoDB Atlas Migration
+**--------------------------------------------------------------------------------**
   • Migrated from local MongoDB to MongoDB Atlas cloud cluster
   • Updated backend/.env with Atlas connection string:
       reactjscluster.3jmtfcp.mongodb.net
@@ -162,10 +147,9 @@ GitHub     : https://github.com/Raamgopal8/lakshmihostpitals
       - Medicine records
       - Bed registry
 
---------------------------------------------------------------------------------
-  [v1.3] — Lakshmi Hospitals Rebranding
-  Date: 2026-05-22
---------------------------------------------------------------------------------
+**--------------------------------------------------------------------------------**
+[v1.3] — Lakshmi Hospitals Rebranding
+**--------------------------------------------------------------------------------**
   BRANDING: Full conversion from generic portal to Lakshmi Hospitals
 
   Auth.jsx (Login Page):
@@ -193,19 +177,16 @@ GitHub     : https://github.com/Raamgopal8/lakshmihostpitals
   • Updated browser tab title
   • Added SEO meta description, keywords, author, OG tags
 
---------------------------------------------------------------------------------
-  [v1.4] — Contact Number Update
-  Date: 2026-05-22
---------------------------------------------------------------------------------
+**--------------------------------------------------------------------------------**
+[v1.4] — Contact Number Update
+**--------------------------------------------------------------------------------**
   • Updated hospital phone number to: +91 9444172675
   • Changed in all locations:
       - Auth.jsx       : Info panel — Emergency & OPD lines
       - Header.jsx     : Dashboard info bar emergency contact
       - index.html     : SEO meta description
 
-================================================================================
-  FEATURES SUMMARY
-================================================================================
+**FEATURES SUMMARY**
 
   ADMIN DASHBOARD:
   ✓ Overview stats (Doctors, Beds, Medicines, Appointments)
@@ -223,16 +204,3 @@ GitHub     : https://github.com/Raamgopal8/lakshmihostpitals
   ✓ Register as Patient or Administrator
   ✓ JWT login with role-based redirect
   ✓ Secure logout
-
-================================================================================
-  CONTACT
-================================================================================
-
-  Lakshmi Hospitals
-  TELC Complex, No: 7A/44-1D, MG Puram,
-  Rover School Rd, Sungu Pettai,
-  Perambalur, Tamil Nadu 621212
-
-  📞 +91 9444172675
-
-================================================================================
