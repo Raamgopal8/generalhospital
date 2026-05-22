@@ -1,4 +1,4 @@
-General Hospital — HOSPITAL MANAGEMENT SYSTEM
+**General Hospital — HOSPITAL MANAGEMENT SYSTEM**
 
 Hospital   : General Hospital
 Address    : Near MB Park, Main Road,

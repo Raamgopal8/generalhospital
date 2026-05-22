@@ -1,4 +1,4 @@
-const API_URL = '/api';
+const API_URL = 'https://generalhospitalbackend.vercel.app';
 
 const getHeaders = () => {
   const token = localStorage.getItem('token');
