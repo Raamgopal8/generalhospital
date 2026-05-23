@@ -1,4 +1,4 @@
-const API_URL = 'https://generalhospitalbackend.vercel.app';
+const API_URL = import.meta.env.VITE_API_URL || 'https://generalhospitalbackend.vercel.app/api';
 
 const getHeaders = () => {
   const token = localStorage.getItem('token');
@@ -12,7 +12,17 @@ const getHeaders = () => {
 };
 
 const handleResponse = async (response) => {
-  const data = await response.json();
+  const text = await response.text();
+  let data = {};
+  try {
+    data = text ? JSON.parse(text) : {};
+  } catch (err) {
+    if (!response.ok) {
+      throw new Error(`Error ${response.status}: ${text || 'Something went wrong'}`);
+    }
+    return text;
+  }
+  
   if (!response.ok) {
     throw new Error(data.message || 'Something went wrong');
   }
