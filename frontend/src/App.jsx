@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Landing from './pages/Landing';
 import Auth from './pages/Auth';
 import UserDashboard from './pages/UserDashboard';
 import AdminDashboard from './pages/AdminDashboard';
@@ -10,7 +11,7 @@ const PrivateRoute = ({ children, roleRequired }) => {
   const userStr = localStorage.getItem('user');
 
   if (!token || !userStr) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/auth" replace />;
   }
 
   const user = JSON.parse(userStr);
@@ -26,8 +27,11 @@ function App() {
   return (
     <Router>
       <Routes>
+        {/* Landing Page */}
+        <Route path="/" element={<Landing />} />
+
         {/* Entry / Authentication */}
-        <Route path="/" element={<Auth />} />
+        <Route path="/auth" element={<Auth />} />
 
         {/* Patient / Standard User Portal */}
         <Route 
@@ -57,3 +61,4 @@ function App() {
 }
 
 export default App;
+

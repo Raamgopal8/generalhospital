@@ -30,9 +30,10 @@ export default function UserDashboard() {
 
   useEffect(() => {
     // Authenticate Patient User
+    const token = localStorage.getItem('token');
     const userStr = localStorage.getItem('user');
-    if (!userStr) {
-      navigate('/');
+    if (!token || !userStr) {
+      navigate('/auth');
       return;
     }
     const currUser = JSON.parse(userStr);
@@ -104,10 +105,10 @@ export default function UserDashboard() {
     try {
       if (isOccupying) {
         await api.beds.toggleOccupancy(bedId, { isOccupied: true });
-        alert('Bed registered successfully!');
+        alert('Chair reserved successfully!');
       } else {
         await api.beds.toggleOccupancy(bedId, { isOccupied: false });
-        alert('Discharged successfully.');
+        alert('Chair vacated successfully.');
       }
       await fetchData();
     } catch (err) {
@@ -144,8 +145,8 @@ export default function UserDashboard() {
           <div style={styles.bannerInfo}>
             <HeartPulse size={40} color="var(--primary)" />
             <div>
-              <h2 style={styles.bannerTitle}>Your Health Care Assistant</h2>
-              <p style={styles.bannerSubtitle}>Book clinical schedules, check into hospital ward beds, and review your prescription notes online.</p>
+              <h2 style={styles.bannerTitle}>Your Dental Care Assistant</h2>
+              <p style={styles.bannerSubtitle}>Book clinical schedules, reserve treatment chairs, and review your prescription notes online.</p>
             </div>
           </div>
           <button className="btn btn-primary" onClick={() => setActiveTab('appointments')}>
@@ -177,9 +178,9 @@ export default function UserDashboard() {
 
           <div className="glass-panel" style={styles.statCard}>
             <div style={styles.statInfo}>
-              <div style={styles.statLabel}>Admitted Status</div>
+              <div style={styles.statLabel}>Chair Reservation</div>
               <div style={{ ...styles.statVal, fontSize: '1.2rem', color: currentAllocatedBed ? 'var(--error)' : 'var(--text-secondary)' }}>
-                {currentAllocatedBed ? `Admitted Bed: ${currentAllocatedBed.bedNumber}` : 'Outpatient'}
+                {currentAllocatedBed ? `Reserved Chair: ${currentAllocatedBed.bedNumber}` : 'No Active Reservation'}
               </div>
             </div>
             <div style={{ ...styles.statIconContainer, background: currentAllocatedBed ? 'rgba(239, 68, 68, 0.08)' : 'rgba(245, 158, 11, 0.08)' }}>
@@ -347,9 +348,9 @@ export default function UserDashboard() {
         <div style={styles.bedMetaAlert} className="glass-panel">
           <Bed size={20} color="var(--primary)" />
           {activeBed ? (
-            <p>You are currently checked into bed <strong>{activeBed.bedNumber}</strong>. Click "Vacate Bed" to check out.</p>
+            <p>You are currently checked into chair <strong>{activeBed.bedNumber}</strong>. Click "Vacate Chair" to check out.</p>
           ) : (
-            <p>Review the real-time ward registry. You can check into any <strong>Vacant</strong> bed slots online.</p>
+            <p>Review the real-time treatment chair registry. You can check into any <strong>Vacant</strong> chair slots online.</p>
           )}
         </div>
 
@@ -383,9 +384,9 @@ export default function UserDashboard() {
                   {b.isOccupied ? (
                     isMine ? (
                       <div style={styles.bedAllocContainer}>
-                        <span style={{ fontSize: '0.8rem', color: 'var(--primary)', fontWeight: 600 }}>Your Reserved Bed</span>
+                        <span style={{ fontSize: '0.8rem', color: 'var(--primary)', fontWeight: 600 }}>Your Reserved Chair</span>
                         <button style={styles.vacateBtn} onClick={() => handleBedAllocation(b._id, false)}>
-                          Vacate Bed
+                          Vacate Chair
                         </button>
                       </div>
                     ) : (
@@ -397,9 +398,9 @@ export default function UserDashboard() {
                       <button 
                         style={styles.reserveBtn} 
                         onClick={() => handleBedAllocation(b._id, true)}
-                        disabled={!!activeBed} // Can only reserve one bed at a time
+                        disabled={!!activeBed} // Can only reserve one chair at a time
                       >
-                        Reserve
+                        Reserve Chair
                       </button>
                     </div>
                   )}
@@ -456,7 +457,7 @@ export default function UserDashboard() {
   const getHeaderTitle = () => {
     switch (activeTab) {
       case 'appointments': return 'Schedule Specialist Visit';
-      case 'beds': return 'Hospital Ward Bed Registry';
+      case 'beds': return 'Treatment Chair Registry';
       case 'history': return 'Your Appointment History';
       default: return 'Patient Portal';
     }

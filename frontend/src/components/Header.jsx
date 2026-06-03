@@ -38,7 +38,7 @@ export default function Header({ user, title }) {
           <div style={styles.infoDivider} />
           <div style={styles.infoBadge}>
             <Phone size={12} color="#10b981" />
-            <span style={{ color: '#10b981' }}>Emergency: +91 9444172675</span>
+            <span style={{ color: '#10b981' }}>Call: 063836 48103</span>
           </div>
         </div>
         <div style={styles.clockCard}>
@@ -55,7 +55,7 @@ export default function Header({ user, title }) {
           <h1 style={styles.title}>{title}</h1>
           <p style={styles.welcome}>
             Welcome back, <span style={{ color: '#ffffff', fontWeight: 600 }}>{user?.name || 'Guest'}</span>
-            <span style={styles.hospitalRef}> — Lakshmi Hospitals, Perambalur</span>
+            <span style={styles.hospitalRef}> — Clear Dental Care, Perambalur</span>
           </p>
         </div>
       </div>

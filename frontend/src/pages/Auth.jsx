@@ -16,8 +16,9 @@ export default function Auth() {
 
   useEffect(() => {
     // If user is already logged in, redirect them
+    const token = localStorage.getItem('token');
     const userStr = localStorage.getItem('user');
-    if (userStr) {
+    if (token && userStr) {
       const user = JSON.parse(userStr);
       if (user.role === 'admin') {
         navigate('/admin');
@@ -66,8 +67,8 @@ export default function Auth() {
           <div style={styles.infoPanelHeader}>
             <Activity size={30} color="var(--primary)" />
             <div>
-              <h2 style={styles.infoPanelTitle}>Lakshmi <span style={{ color: 'var(--primary)' }}>Hospitals</span></h2>
-              <p style={styles.infoPanelTagline}>Caring for Life Since 1998</p>
+              <h2 style={styles.infoPanelTitle}>Clear Dental <span style={{ color: 'var(--primary)' }}>Care</span></h2>
+              <p style={styles.infoPanelTagline}>Precision Dentistry & Smile Design</p>
             </div>
           </div>
 
@@ -77,16 +78,15 @@ export default function Auth() {
             <MapPin size={16} color="var(--primary)" style={{ flexShrink: 0, marginTop: '2px' }} />
             <div>
               <p style={styles.infoBlockLabel}>Address</p>
-              <p style={styles.infoBlockValue}>TELC Complex, No: 7A/44-1D, MG Puram,<br />Rover School Rd, Sungu Pettai,<br />Perambalur, Tamil Nadu 621212</p>
+              <p style={styles.infoBlockValue}>No 2, near Thanthai Hans Rover Centenary Arch,<br />opposite to tambu vegetable shop, Sungu Pettai,<br />Perambalur, Tamil Nadu 621212</p>
             </div>
           </div>
 
           <div style={styles.infoBlock}>
             <Phone size={16} color="#10b981" style={{ flexShrink: 0 }} />
             <div>
-              <p style={styles.infoBlockLabel}>Emergency</p>
-              <p style={{ ...styles.infoBlockValue, color: '#10b981', fontWeight: 700 }}>+91 9444172675</p>
-              <p style={styles.infoBlockValue}>+91 9444172675 (OPD)</p>
+              <p style={styles.infoBlockLabel}>Contact Phone</p>
+              <p style={{ ...styles.infoBlockValue, color: '#10b981', fontWeight: 700 }}>063836 48103</p>
             </div>
           </div>
 
@@ -94,15 +94,14 @@ export default function Auth() {
             <Clock size={16} color="#f59e0b" style={{ flexShrink: 0 }} />
             <div>
               <p style={styles.infoBlockLabel}>Timings</p>
-              <p style={styles.infoBlockValue}>OPD: 8:00 AM – 8:00 PM</p>
-              <p style={styles.infoBlockValue}>Emergency: 24 × 7</p>
+              <p style={styles.infoBlockValue}>Clinic Hours: 09:00 AM – 09:00 PM</p>
             </div>
           </div>
 
           <div style={styles.badgeRow}>
-            <div style={styles.badge}><Award size={12} color="var(--primary)" /> NABH</div>
-            <div style={styles.badge}><Shield size={12} color="#10b981" /> ISO 9001</div>
-            <div style={styles.badge}><Activity size={12} color="#f59e0b" /> 24/7 ICU</div>
+            <div style={styles.badge}><Award size={12} color="var(--primary)" /> Smile Design</div>
+            <div style={styles.badge}><Shield size={12} color="#10b981" /> 3D Scanning</div>
+            <div style={styles.badge}><Activity size={12} color="#f59e0b" /> Implants</div>
           </div>
         </div>
 
@@ -113,8 +112,8 @@ export default function Auth() {
             <div style={styles.logoContainer}>
               <Activity size={28} color="var(--primary)" />
             </div>
-            <h1 style={styles.logoText}>Lakshmi <span style={{ color: 'var(--primary)' }}>Hospitals</span></h1>
-            <p style={styles.subtitle}>Enterprise Hospital Management Portal</p>
+            <h1 style={styles.logoText}>Clear Dental <span style={{ color: 'var(--primary)' }}>Care</span></h1>
+            <p style={styles.subtitle}>Clear Dental Care Management Portal</p>
           </div>
 
         {/* Action Toggle (Login / Signup) */}

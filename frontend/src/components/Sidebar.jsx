@@ -26,13 +26,13 @@ export default function Sidebar({ user, activeTab, setActiveTab }) {
     { id: 'doctors', label: 'Manage Doctors', icon: Users },
     { id: 'duty', label: 'Assign Duty', icon: CalendarDays },
     { id: 'medicines', label: 'Medicine Inventory', icon: Pill },
-    { id: 'beds', label: 'Hospital Beds', icon: Bed },
+    { id: 'beds', label: 'Treatment Chairs', icon: Bed },
   ];
 
   const userItems = [
     { id: 'dashboard', label: 'User Dashboard', icon: LayoutDashboard },
     { id: 'appointments', label: 'Book Appointment', icon: CalendarDays },
-    { id: 'beds', label: 'Bed Availability', icon: Bed },
+    { id: 'beds', label: 'Chair Availability', icon: Bed },
     { id: 'history', label: 'My Bookings', icon: History },
   ];
 
@@ -44,7 +44,7 @@ export default function Sidebar({ user, activeTab, setActiveTab }) {
       <div style={styles.logoArea}>
         <Activity size={24} color="var(--primary)" />
         <div>
-          <h2 style={styles.logoText}>Lakshmi <span style={{ color: 'var(--primary)' }}>Hospitals</span></h2>
+          <h2 style={styles.logoText}>Clear Dental <span style={{ color: 'var(--primary)' }}>Care</span></h2>
           <p style={styles.logoTagline}>Perambalur, Tamil Nadu</p>
         </div>
       </div>
@@ -99,8 +99,8 @@ export default function Sidebar({ user, activeTab, setActiveTab }) {
         <div style={styles.addressCard}>
           <MapPin size={11} color="var(--primary)" style={{ flexShrink: 0, marginTop: '1px' }} />
           <p style={styles.addressText}>
-            TELC Complex, No: 7A/44-1D, MG Puram,<br />
-            Rover School Rd, Sungu Pettai,<br />
+            No 2, near Thanthai Hans Rover Centenary Arch,<br />
+            opp. tambu vegetable shop, Sungu Pettai,<br />
             Perambalur, Tamil Nadu 621212
           </p>
         </div>

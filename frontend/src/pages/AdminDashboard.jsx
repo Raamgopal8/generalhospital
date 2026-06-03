@@ -47,9 +47,10 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     // Authenticate Admin
+    const token = localStorage.getItem('token');
     const userStr = localStorage.getItem('user');
-    if (!userStr) {
-      navigate('/');
+    if (!token || !userStr) {
+      navigate('/auth');
       return;
     }
     const currUser = JSON.parse(userStr);
